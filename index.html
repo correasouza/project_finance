@@ -10,24 +10,19 @@
     <title>Finance</title>
 </head>
 
-<script>
-document.getElementById('button-simular').addEventListener('click', function() {
-    window.open('pagina-nova.html', '_blank'); // Abre em nova aba
-    // ou use window.location.href = 'pagina-nova.html'; para abrir na mesma aba
-});
-</script>
-
 <body>
     <main class="main">
         <section class="section-information">
             <article class="text-information">
-                <header class="header">
+                <div class="logoTitle">
                         <img src=".\assets\logoTitle.png" alt="">
-                </header>         
-                <h1>Simule o seu financiamento.</h1>
-                <p>Escolha as melhores condições para
-    o financiamento do seu veículo.</p>
-                <img src=".\assets\car.png" alt="">
+                </div>
+                <article>
+                    <h1>Simule o seu <span class="color-financiamento">financiamento</span>.</h1>
+                    <p>Escolha as melhores condições para
+        o financiamento do seu veículo.</p>
+                    <img src=".\assets\car.png" alt="">
+                </article>         
             </article>          
         </section>
         <section class="section-form">
@@ -37,29 +32,52 @@ document.getElementById('button-simular').addEventListener('click', function() {
                     <p>Preencha os campos e simule
 o seu financiamento.</p>
                 </div>
-                <div class="form-inputs">
-                    <input 
-                        type="text" 
-                        placeholder="Digite o valor"
-                        class="input-value"
-                    >
-                    <select class="select-value">
-                        <option value="" disabled selected>Selecione o banco
-                        </option>
-                        <option value="Itaú">Itaú</option>
-                        <option value="Banco do Brasil">Banco do Brasil</option>
-                    </select>
-                     <select class="select-value">
-                        <option value="" disabled selected>Em quantos meses?
-                        </option>
-                        <option value="12x">12 parcelas</option>
-                        <option value="24x">24 parcelas</option>
-                        <option value="36x">36 parcelas</option>
-                    </select>
-                </div>
+                <form class="form-inputs">
+                    <div>
+                        <label for="">Valor</label>
+                        <input 
+                            type="text" 
+                            placeholder="Digite o valor"
+                            class="input-value"
+                            id="valor"
+                        >
+                    </div>
+                    
+                    <div>
+                        <label for="">Banco</label>
+                        <select class="select-value" id="banco">
+                            <option value="" disabled selected>Selecione o banco
+                            </option>
+                            <option value="Caixa">Caixa</option>
+                            <option value="Santander">Santander</option>
+                            <option value="Bradesco">Bradesco</option>
+                            <option value="Itaú">Itaú</option>
+                            <option value="Nubank">Nubank</option>
+                            <option value="Inter">Inter</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="">Parcelas</label>
+                        <select class="select-value" id="parcelas">
+                            <option value="" disabled selected>Em quantos meses?
+                            </option>
+                            <option value="6x">06 parcelas</option>
+                            <option value="12x">12 parcelas</option>
+                            <option value="18x">18 parcelas</option>
+                            <option value="24x">24 parcelas</option>
+                            <option value="36x">36 parcelas</option>
+                            <option value="48x">48 parcelas</option>
+                            <option value="60x">60 parcelas</option>
+                            <option value="72x">72 parcelas</option>
+                        </select>
+                    </div>
+
+                </form>
                 <button class="button-simular" id="button-simular">Simular financiamento</button>
             </article>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

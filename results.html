@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Finance</title>
+</head>
+<body>
+    <main class="main-results">
+        <section class="section-results">
+            <section class="section-text-results">
+                <div>
+                    <img src="./assets/logoTitle.png" alt="">
+                </div>
+                <article class="text-results">
+                    <p>Valor das suas parcelas:</p>
+                    <h1 id="parcela">R$ 0,00</h1>
+                    <p>Valor final a pagar:</p>
+                    <h1 id="total">R$ 0,00</h1>
+                    <span><img src="./assets/asterisco.png" alt=""><i id="prazo">Financiamento em 0 meses.</i></span>
+                    <button id="voltar-simulador">Voltar ao simulador</button>
+                </article>
+                <div>
+                    <p>Todos os direitos reservados.</p>
+                </div>
+            </section>
+        </section>
+        <section class="section-banner">
+            <div>
+                <img src="./assets/banner.png" alt="" class="banner-image">
+            </div>
+        </section>
+    </main>
+
+  <script>
+    const parcela = parseFloat(localStorage.getItem('parcela')) || 0;
+    const total = parseFloat(localStorage.getItem('total')) || 0;
+    const meses = localStorage.getItem('meses') || 0;
+
+    document.getElementById('parcela').innerText = parcela.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+    document.getElementById('total').innerText = total.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+    document.getElementById('prazo').innerText = `Financiamento em ${meses} meses.`;
+
+    document.getElementById('voltar-simulador').addEventListener('click', function() {
+      window.location.href = 'index.html'; // ou o nome da página do simulador
+    });
+  </script>
+</body>
+</html>
