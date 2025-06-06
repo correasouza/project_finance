@@ -4,11 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Finance</title>
 </head>
+
+<script>
+document.getElementById('button-simular').addEventListener('click', function() {
+    window.open('pagina-nova.html', '_blank'); // Abre em nova aba
+    // ou use window.location.href = 'pagina-nova.html'; para abrir na mesma aba
+});
+</script>
+
 <body>
-    <main>
-        
+    <main class="main">
+        <section class="section-information">
+            <article class="text-information">
+                <header class="header">
+                        <img src=".\assets\logoTitle.png" alt="">
+                </header>         
+                <h1>Simule o seu financiamento.</h1>
+                <p>Escolha as melhores condições para
+    o financiamento do seu veículo.</p>
+                <img src=".\assets\car.png" alt="">
+            </article>          
+        </section>
+        <section class="section-form">
+            <article class="form"> 
+                <div>
+                    <img src=".\assets\Group 47.png" alt="">
+                    <p>Preencha os campos e simule
+o seu financiamento.</p>
+                </div>
+                <div class="form-inputs">
+                    <input 
+                        type="text" 
+                        placeholder="Digite o valor"
+                        class="input-value"
+                    >
+                    <select class="select-value">
+                        <option value="" disabled selected>Selecione o banco
+                        </option>
+                        <option value="Itaú">Itaú</option>
+                        <option value="Banco do Brasil">Banco do Brasil</option>
+                    </select>
+                     <select class="select-value">
+                        <option value="" disabled selected>Em quantos meses?
+                        </option>
+                        <option value="12x">12 parcelas</option>
+                        <option value="24x">24 parcelas</option>
+                        <option value="36x">36 parcelas</option>
+                    </select>
+                </div>
+                <button class="button-simular" id="button-simular">Simular financiamento</button>
+            </article>
+        </section>
     </main>
 </body>
 </html>

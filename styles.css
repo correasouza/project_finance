@@ -4,3 +4,121 @@
     box-sizing: border-box;
 }
 
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.section-information {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100dvh;
+    padding-top: 32px;
+    align-items: center;
+}
+
+.text-information h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #5F5F5F;
+    line-height: 64px;
+    padding-top: 204px;
+}
+
+.text-information p {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #939393;
+    line-height: 28px;
+}
+
+.text-information {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    row-gap: 20px;
+}
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #F9F9F9;
+    justify-content: center;
+    padding-left: 82px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 20px;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form p {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #939393;
+    line-height: 28px;
+}
+
+.input-value {
+    height: 52px;
+    border-radius: 8px;
+    border: solid 1px #D9D9D9;
+    padding-left: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #939393;
+    font-weight: 400px;
+}
+
+.input-value:focus {
+    outline: none;
+    border-color: #20C982;
+    border-width: 2px;
+}
+
+.select-value {
+    height: 52px;
+    border-radius: 8px;
+    border: solid 1px #D9D9D9;
+    padding-left: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #939393;
+    font-weight: 400px;
+}
+
+.select-value:focus {
+    outline: none;
+    border-color: #20C982;
+    border-width: 2px;
+}
+
+.button-simular {
+    height: 52px;
+    background-color: #20C982;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+}
+
+.button-simular:hover {
+    cursor: pointer;
+    background-color: #18b875;
+}
